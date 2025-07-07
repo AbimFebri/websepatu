@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "installCommand": "npm install", 
-  "buildCommand": "npm run build", 
+  "installCommand": "npm install",
+  "buildCommand": "npm run build && php artisan cache:clear && php artisan config:clear && php artisan route:clear && php artisan view:clear",
+  
   "functions": {
-    "api/index.php": { 
+    "api/index.php": {
       "runtime": "vercel-php@0.7.1"
-      
     }
   },
   "routes": [
